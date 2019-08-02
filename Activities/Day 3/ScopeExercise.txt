@@ -1,0 +1,33 @@
+Write down what value should be printed for each printf call. If the call is illegal, write illegal.
+
+
+#include <stdio.h>
+
+
+int i = 5;
+
+int main(void)
+{
+  int i = 7;
+  char k;
+  printf("I's value is: %i\n", i);          ______________
+
+  if(i == 7)
+  {
+    int i = 6;
+    int j = 12;
+
+    printf("I's value is: %i\n", i);        ______________
+  }
+
+  printf("J's value is: %i", j);            ______________
+
+  /* challenge */
+  for(k = 0; k <= 300; ++k)
+  {
+    if(k == 300)
+      printf("I's value is: %i\n", i);     ________________
+  }
+
+  return 1;
+}
