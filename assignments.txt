@@ -1,0 +1,391 @@
+Information About the Exercises
+
+There are several programming practices described within this page. If any of the exercises require random numbers, you'll need to include stdlib.h. You can use this function to generate random numbers:
+
+int RandomInt(int low, int high)
+{
+  return rand() % (high - low + 1) + low;
+}
+
+Programming Practice
+
+Write a program that prompts the user for two integers and then displays them. A sample run will look like this:
+ Enter two integers separated by a space: 3 10
+You entered 3 and 5.
+The name of the file should be choose1.c and the command to compile it will look like this:
+ gcc -Werror -Wall -Wextra -ansi -pedantic choose1.c -o choose1
+Here is an executable for you to observe: choose1-demo.exe
+ 
+
+ 
+
+Write a program that prints out the numbers 1 to 20 and also the numbers squared. It should look like this:
+      1:           1
+     2:           4
+     3:           9
+     4:          16
+     5:          25
+     6:          36
+     7:          49
+     8:          64
+     9:          81
+    10:         100
+    11:         121
+    12:         144
+    13:         169
+    14:         196
+    15:         225
+    16:         256
+    17:         289
+    18:         324
+    19:         361
+    20:         400
+Notice that all of the numbers are right-justified. Each number in the first column takes up 6 characters, and each number in the second column takes up 12 characters. Your output must match exactly. Don't forget the colon after the number in the first column.
+The name of the file should be squares1.c and the command to compile it will look like this:
+
+ gcc -Werror -Wall -Wextra -ansi -pedantic squares1.c -o squares1
+Here is an executable for you to observe: squares1-demo.exe
+ 
+
+ 
+
+Write a program that prompts a user for an integer and prints out the numbers from 1 to to the chosen integer. It also prints the numbers squared. This is very similar to the previous program except that the maximum number is input from the keyboard at runtime. It should look like this (only showing partial output because there are too many lines to show):
+ Enter an integer: 1000
+     1:           1
+     2:           4
+     3:           9
+     4:          16
+     5:          25
+     6:          36
+     7:          49
+     8:          64
+     9:          81
+    10:         100
+Many more lines would go here...
+   995:      990025
+   996:      992016
+   997:      994009
+   998:      996004
+   999:      998001
+  1000:     1000000
+Notice that all of the numbers are right-justified. Each number in the first column takes up 6 characters, and each number in the second column takes up 12 characters. Your output must match exactly.
+The name of the file should be squares2.c and the command to compile it will look like this:
+
+ gcc -Werror -Wall -Wextra -ansi -pedantic squares2.c -o squares2
+Here is an executable for you to observe: squares2-demo.exe
+Thought Question: What happens if you enter 50000?
+
+ 
+
+ 
+
+Write a program that prompts the user for a positive integer, N, and then prints out the sum of the numbers from 1 up to and including N. Some sample runs:
+ Enter a positive integer: 10
+The sum of the numbers from 1 to 10 is 55
+ Enter a positive integer: 10
+The sum of the numbers from 1 to 10 is 5050
+ Enter a positive integer: 123
+The sum of the numbers from 1 to 123 is 7626
+The name of the file should be sum1.c and the command to compile it will look like this:
+
+ gcc -Werror -Wall -Wextra -ansi -pedantic sum1.c -o sum1
+You don't have to worry about invalid input or integer overflow. However, for additional practice, you may wish to handle invalid integers.
+Here is an executable for you to observe: sum1-demo.exe
+
+ 
+
+ 
+
+Write a program that prints out a multiplication table up to 12. The output should look as follows:
+     1    2    3    4    5    6    7    8    9   10   11   12
+    2    4    6    8   10   12   14   16   18   20   22   24
+    3    6    9   12   15   18   21   24   27   30   33   36
+    4    8   12   16   20   24   28   32   36   40   44   48
+    5   10   15   20   25   30   35   40   45   50   55   60
+    6   12   18   24   30   36   42   48   54   60   66   72
+    7   14   21   28   35   42   49   56   63   70   77   84
+    8   16   24   32   40   48   56   64   72   80   88   96
+    9   18   27   36   45   54   63   72   81   90   99  108
+   10   20   30   40   50   60   70   80   90  100  110  120
+   11   22   33   44   55   66   77   88   99  110  121  132
+   12   24   36   48   60   72   84   96  108  120  132  144
+Notice that all of the numbers are right-justified. Each number in the first column takes up 5 characters, so you should use %5i as the format string.
+The name of the file should be mtable1.c and the command to compile it will look like this:
+
+ gcc -Werror -Wall -Wextra -ansi -pedantic mtable1.c -o mtable1
+Here is an executable for you to observe: mtable1-demo.exe
+
+ 
+
+ 
+
+This program is similar to the one above. Write a program that prompts a user for a positive integer and then prints out a multiplication table the size that the user specified. The table should also print the numbers along the top and the left. Here's an example:
+ Enter an integer greater than 0: 8
+
+      |    1    2    3    4    5    6    7    8
+------+----------------------------------------
+    1 |    1    2    3    4    5    6    7    8
+    2 |    2    4    6    8   10   12   14   16
+    3 |    3    6    9   12   15   18   21   24
+    4 |    4    8   12   16   20   24   28   32
+    5 |    5   10   15   20   25   30   35   40
+    6 |    6   12   18   24   30   36   42   48
+    7 |    7   14   21   28   35   42   49   56
+    8 |    8   16   24   32   40   48   56   64
+Notice that all of the numbers are right-justified. Each number in the first column takes up 5 characters, so you should use %5i as the format string.
+The name of the file should be mtable2.c and the command to compile it will look like this:
+
+ gcc -Werror -Wall -Wextra -ansi -pedantic mtable2.c -o mtable2
+You don't have to worry about invalid input or integer overflow. However, for additional practice, you may wish to handle invalid integers.
+Here is an executable for you to observe: mtable2-demo.exe
+
+ 
+
+ 
+
+Write a program that prints out random numbers. You need to prompt the user for 3 numbers:
+The number of random values to print (count)
+The the lowest random value to print (low)
+The highest random value to print (high)
+ Enter three integers separated by spaces.
+The integers are for the count, low, and high values: 10 -5 5
+     1:         1
+     2:         5
+     3:         1
+     4:        -3
+     5:        -4
+     6:        -1
+     7:        -5
+     8:         1
+     9:        -2
+    10:        -4
+Notice that all of the numbers are right-justified. Each number in the first column takes up 6 characters, and each number in the second column takes up 10 characters. (You'll want to use %6i and %10i, respectively.)
+The name of the file should be random1.c and the command to compile it will look like this:
+
+ gcc -Werror -Wall -Wextra -ansi -pedantic random1.c -o random1
+Here is an executable for you to observe: random1-demo.exe
+ 
+
+ 
+
+Write a program that prompts a user for an integer between 1 and 100. If the user enters a number outside of this range, the user is asked again to input a number between 1 and 100. When the user enters a number between 1 and 100, the program prints out the number and exits.
+Here is a sample run:
+
+ Enter an integer between 1 and 100: 999
+Enter an integer between 1 and 100: 0
+Enter an integer between 1 and 100: -56
+Enter an integer between 1 and 100: 25
+You entered 25.
+The name of the file should be choose2.c and the command to compile it will look like this:
+
+ gcc -Werror -Wall -Wextra -ansi -pedantic choose2.c -o choose2
+Here is an executable for you to observe: choose2-demo.exe
+ 
+
+ 
+
+This is a variation of the previous exercise. Write a program that prompts a user for a positive or negative integer. If the user enters a positive number, that number is printed out with a statement saying it is positive. If the user enters a negative number, that number is printed out with a statement saying it is negative. If the user enters a 0, then the program exits.
+Here is a sample run:
+
+ Enter a positive or negative integer (enter 0 to quit): 25
+You entered a positive number: 25
+Enter a positive or negative integer (enter 0 to quit): -23
+You entered a negative number: -23
+Enter a positive or negative integer (enter 0 to quit): 0
+The name of the file should be choose3.c and the command to compile it will look like this:
+
+ gcc -Werror -Wall -Wextra -ansi -pedantic choose3.c -o choose3
+Here is an executable for you to observe: choose3-demo.exe
+ 
+
+ 
+
+Write a program that similates flipping a coin a number of times. The program will ask the user to enter the number of times to flip the coin.
+Here is the output from the program:
+
+ How many times do you want to flip the coin? 100000
+After 100000 flips, here are the results:
+
+  Heads     Tails
+-------------------
+   50047     49953
+50.0470%   49.9530%
+Notice that all of the numbers are right-justified. Each number in the first column takes up 6 characters, and each number in the second column takes up 12 characters. You will need to use the rand function from stdlib.h.
+The name of the file should be flip1.c and the command to compile it will look like this:
+
+ gcc -Werror -Wall -Wextra -ansi -pedantic flip1.c -o flip1
+Here is an executable for you to observe: flip1-demo.exe
+Thought Question: What do you notice as you increase the number of flips?
+
+ 
+
+ 
+
+Write a very simple guessing game. The computer will choose a number (randomly) between 1 and 100 and you have to guess what number was chosen. For example, here is the interactive output from running the program:
+ Guess the number I'm thinking of (between 1 and 100): 50
+Too high. Guess again: 30
+Too low. Guess again: 39
+Too high. Guess again: 35
+Too high. Guess again: 33
+Too low. Guess again: 34
+You guessed the number 34 in 6 tries!
+Bye.
+The name of the file should be user_guess1.c and the command to compile it will look like this:
+ gcc -Werror -Wall -Wextra -ansi -pedantic user_guess1.c -o user_guess1
+Here is an executable for you to observe: user_guess1-demo.exe
+ 
+
+ 
+
+This is a variation on the guessing game above. The difference is that the user will think of the number and the computer will try to guess it. To make this program robust requires significantly more work than the previous guessing game. First off, the range of numbers is going to be specified on the command line when the program is run:
+ computer_guess 1 100
+The example above shows the programming being run with the numbers 1 and 100, which is the range to choose from. You don't have to figure out how to do this, the code below will do it for you.
+For example, here is the interactive output from running the program:
+
+ Pick a number for me to guess (between 1 and 100): 76
+Is the number 50? (1=too low, 2=too high, 3=correct, 0=quit) 1
+Is the number 75? (1=too low, 2=too high, 3=correct, 0=quit) 1
+Is the number 88? (1=too low, 2=too high, 3=correct, 0=quit) 2
+Is the number 81? (1=too low, 2=too high, 3=correct, 0=quit) 2
+Is the number 78? (1=too low, 2=too high, 3=correct, 0=quit) 2
+Is the number 76? (1=too low, 2=too high, 3=correct, 0=quit) 3
+I guessed your number in 6 guesses!
+Bye.
+
+
+Pick a number for me to guess (between 1 and 100): 50
+Is the number 50? (1=too low, 2=too high, 3=correct, 0=quit) 1
+What? You think you can get away with that?
+I guessed your number in 1 guesses!
+Bye.
+Use this code as a starting point:
+#include <stdio.h>  /* printf, scanf     */
+#include <stdlib.h> /* rand, srand, atoi */
+#include <time.h>   /* time              */
+
+/* generate random numbers between low and high */
+int RandomInt(int low, int high)
+{
+  int number;
+  number = rand() % (high - low + 1) + low;
+  return number;
+}
+
+int main(int argc, char **argv)
+{
+  int low;  /* the lower bound */
+  int high; /* the upper bound */
+
+    /* If the user didn't provide any arguments, quit */
+  if (argc < 2)
+  {
+    printf("Usage: %s low high\n", argv[0]);
+    printf("       low  - the lower bound\n");
+    printf("       high - the upper bound\n\n");
+    return -1;
+  }
+
+    /* Convert strings to integers */
+  low = atoi(argv[1]);  
+  high = atoi(argv[2]); 
+
+  srand((unsigned)time(0));
+
+  /****************************
+   *                          *
+   *  YOUR CODE GOES HERE     *
+   *                          *
+   ****************************/
+  
+  return 0;
+}
+The name of the file should be computer_guess1.c and the command to compile it will look like this:
+ gcc -Werror -Wall -Wextra -ansi -pedantic computer_guess1.c -o computer_guess1
+Here is an executable for you to observe: computer_guess1-demo.exe
+ 
+
+ 
+
+Write a function that converts an alphabetic phone number into a numeric one. This is the prototype
+ int word_to_phonenumber(const char *word, int number[]);
+word - A NUL-terminated string with exactly 7 letters and a 0 at the end.
+number - An empty array of 7 integers to hold the phone number.
+The return is 0 if the word was valid (no 'Q' or 'Z' in it), otherwise, a 1 is returned, meaning the input was invalid. Put this function in a C file named phone1.c.
+
+This is the mapping from letters to numbers on the keypad:
+
+ 
+
+ 2 - ABC
+3 - DEF
+4 - GHI
+5 - JKL
+6 - MNO
+7 - PRS
+8 - TUV
+9 - WXY
+Notice that there are no letters associated with the number 1, and the the letters Q and Z do not appear. Here's a main.c file for you to test with:
+#include <stdio.h>
+
+/* Helper function to print phone numbers */
+void print_phone_number(const int *array)
+{
+  int i; /* loop counter */
+
+    /* prints 7-digit phone number */
+  for (i = 0; i < 7; i++)
+  {
+    printf("%i", array[i]);
+
+      /* print a hyphen between 3rd and 4th digit */
+    if (i == 2)
+      printf("-");
+  }
+}
+
+int main(void)
+{
+  int i;         /* loop counter                          */
+  int fail;      /* result of calling word_to_phonenumber */
+  int number[7]; /* 7-digit phone number                  */
+
+    /* words to test */
+  const char *words[] = {"DIGIPEN", "GETLOST", "BANANAS", "BARBIEQ",
+                         "ZEBRAVE", "ABCDEFG", "SAYWHAT", "MARINER"};
+
+    /* the number of words in the array above */
+  int size = sizeof(words) / sizeof(*words);
+
+    /* Convert each word to a phone number */  
+  for (i = 0; i < size; i++)
+  {
+      /* There can be no letter Q or Z in the "number" */
+    fail = word_to_phonenumber(words[i], number);
+    if (fail)
+      printf("Illegal letter: %s\n", words[i]);
+    else
+    {
+      printf("Word: %s : ", words[i]);
+      print_phone_number(number);
+      printf("\n");
+    }
+  }
+
+  return 0;
+}
+Output:
+ Word: DIGIPEN : 344-4736
+Word: GETLOST : 438-5678
+Word: BANANAS : 226-2627
+Illegal letter: BARBIEQ
+Illegal letter: ZEBRAVE
+Word: ABCDEFG : 222-3334
+Word: SAYWHAT : 729-9428
+Word: MARINER : 627-4637
+The name of the file should be phone1.c and the command to compile it will look like this:
+
+ gcc -Werror -Wall -Wextra -ansi -pedantic main.c phone1.c -o phone1
+You don't have to handle invalid input, meaning that the input string will have length exactly 7 and will only contain uppercase letters. You do have to deal with the situation where the letter Q or Z appears in the string.
+However, if you really want to make your function robust, you should check the length of the string before using it and if it isn't exactly 7 characters, you can just exit the function with an error return. You should also exit if any character is also not an uppercase letter. This will complicate your function slightly, but it will make it safer to use in case someone calls it will bad inputs.
+
+Here is an executable for you to observe: phone1-demo.exe    Your program doesn't have to be interactive like this one. Although, if you want to make it that way, you can.
